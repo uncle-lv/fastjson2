@@ -675,7 +675,7 @@ public class ObjectWriterAdapter<T>
             if (fieldValue == object) {
                 fieldValue = jsonObject;
             }
-            jsonObject.put(fieldWriter.fieldName, fieldValue);
+            jsonObject.put(fieldWriter.fieldName, JSON.toJSON(fieldValue));
         }
 
         return jsonObject;
